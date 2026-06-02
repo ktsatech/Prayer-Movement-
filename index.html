@@ -3,8 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+  <!-- Primary Meta -->
+  <title>Uganda Let's Pray | Prayer Movement & Church Registration</title>
+  <meta name="description" content="Join churches across Uganda in one hour of prayer, worship, and intercession for our nation on June 7, 2026. Register your church today.">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Uganda Let's Pray — One Heart. One Prayer. One Offering for Uganda.">
+  <meta property="og:description" content="On June 7, 2026 believers across Uganda unite in prayer for the nation. Register your church and join the movement. Online Sunday gathering every week at 9PM EAT — get the Google Meet link via WhatsApp.">
+  <meta property="og:image" content="/images/prayer-movement-flyer.jpg">
+  <meta property="og:image:width" content="1080">
+  <meta property="og:image:height" content="1350">
+  <meta property="og:image:alt" content="Uganda Let's Pray — Prayer Movement & Simultaneous Offering, Sunday 7 June 2026">
+  <meta property="og:url" content="https://prayermovement.netlify.app">
+  <meta property="og:site_name" content="Uganda Prayer Movement">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Uganda Let's Pray — One Heart. One Prayer.">
+  <meta name="twitter:description" content="Join churches across Uganda in prayer for the nation. Sunday online gathering 9PM EAT — get the Google Meet link via WhatsApp.">
+  <meta name="twitter:image" content="/images/prayer-movement-flyer.jpg">
+
+  <!-- WhatsApp link preview uses OG tags above -->
+
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <title>Prayer Movement | Church Registration</title>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="Mq.css">
   <script type="importmap">
@@ -32,6 +55,21 @@
   </div>
   <button class="hamburger" id="hamburger">☰</button>
 </nav>
+
+<!-- June 7th Google Meet Announcement Banner -->
+<div class="meet-banner">
+  <div class="meet-banner-inner">
+    <span class="meet-icon">📹</span>
+    <div class="meet-text">
+      <strong>Online Prayer Gathering — Sunday, 7th June 2026 at 9:00 PM EAT</strong>
+      <span>Join us online as we pray for Uganda. Get the Google Meet link via WhatsApp.</span>
+    </div>
+    <a href="https://wa.me/256726543986?text=Hello%2C%20please%20share%20the%20June%207th%20Google%20Meet%20prayer%20link"
+       class="meet-wa-btn" target="_blank" rel="noopener noreferrer">
+      Get Meet Link on WhatsApp
+    </a>
+  </div>
+</div>
 
 <section class="hero">
   <h1>Uniting Churches in Prayer,<br>Faith and National Transformation</h1>
@@ -262,6 +300,51 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50" height="32">
 </a>
 
+<!-- Prayer Movement Flyer -->
+<section class="flyer-section">
+  <div class="flyer-container">
+    <img src="/images/prayer-movement-flyer.jpg"
+         alt="Uganda Let's Pray — Prayer Movement & Simultaneous Offering, Sunday 7 June 2026"
+         class="flyer-img">
+  </div>
+</section>
+
+<!-- Kutesa Emma AI Chat Widget -->
+<div id="kutesaChat" class="chat-widget">
+  <button class="chat-toggle" id="chatToggle" aria-label="Chat with Kutesa Emma">
+    <span class="chat-toggle-icon">💬</span>
+    <span class="chat-toggle-label">Ask Kutesa Emma</span>
+  </button>
+  <div class="chat-box" id="chatBox" style="display:none;">
+    <div class="chat-header">
+      <div class="chat-agent-info">
+        <div class="chat-agent-avatar">KE</div>
+        <div>
+          <strong>Kutesa Emma</strong>
+          <span class="chat-agent-sub">AI Prayer Movement Assistant</span>
+        </div>
+      </div>
+      <button class="chat-close" id="chatClose" aria-label="Close chat">✕</button>
+    </div>
+    <div class="chat-disclaimer">
+      ⚠️ Kutesa Emma is an AI and can make errors. For accurate help, contact the admin on
+      <a href="https://wa.me/256726543986" target="_blank" rel="noopener noreferrer">WhatsApp +256726543986</a>.
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-msg agent">
+        <p>Hello! I'm <strong>Kutesa Emma</strong>, your AI assistant for the Uganda Prayer Movement. 🙏</p>
+        <p>I can help with church registration, event details, and more. <br>
+        <em>Note: I can sometimes make errors — for urgent matters please contact the admin on <a href="https://wa.me/256726543986" target="_blank" rel="noopener noreferrer">WhatsApp</a>.</em></p>
+        <p><strong>📹 Online Prayer Gathering — Sunday 7th June 2026 at 9:00 PM EAT!</strong> Contact admin on WhatsApp to get the Google Meet link.</p>
+      </div>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Type your question…" autocomplete="off" required>
+      <button type="submit" id="chatSend">Send</button>
+    </form>
+  </div>
+</div>
+
 <footer>
   <p>© 2026 International Prayer Movement | Uganda Prayer Warriors</p>
   <p><a href="#">Home</a> | <a href="#about">About</a> | <a href="#register">Register</a></p>
@@ -269,8 +352,82 @@
 <!-- EmailJS SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-  // Initialize EmailJS with your public key
   emailjs.init('eNR8A7R-MO9ETcLX8');
+</script>
+
+<!-- Kutesa Emma Chat Logic -->
+<script>
+(function() {
+  const toggle = document.getElementById('chatToggle');
+  const box = document.getElementById('chatBox');
+  const closeBtn = document.getElementById('chatClose');
+  const form = document.getElementById('chatForm');
+  const input = document.getElementById('chatInput');
+  const messagesEl = document.getElementById('chatMessages');
+  let conversationHistory = [];
+
+  toggle.addEventListener('click', () => {
+    const open = box.style.display === 'none';
+    box.style.display = open ? 'flex' : 'none';
+    toggle.classList.toggle('active', open);
+  });
+
+  closeBtn.addEventListener('click', () => {
+    box.style.display = 'none';
+    toggle.classList.remove('active');
+  });
+
+  function appendMsg(role, html) {
+    const div = document.createElement('div');
+    div.className = 'chat-msg ' + (role === 'user' ? 'user' : 'agent');
+    div.innerHTML = '<p>' + html + '</p>';
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const text = input.value.trim();
+    if (!text) return;
+
+    appendMsg('user', escapeHtml(text));
+    conversationHistory.push({ role: 'user', content: text });
+    input.value = '';
+    input.disabled = true;
+    document.getElementById('chatSend').disabled = true;
+
+    const typing = document.createElement('div');
+    typing.className = 'chat-msg agent typing';
+    typing.innerHTML = '<p>Kutesa Emma is typing…</p>';
+    messagesEl.appendChild(typing);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: conversationHistory }),
+      });
+      const data = await res.json();
+      typing.remove();
+
+      const reply = data.reply || data.error || 'Kutesa Emma could not respond. Please contact the admin on WhatsApp at +256726543986 for assistance.';
+      conversationHistory.push({ role: 'assistant', content: reply });
+      appendMsg('agent', escapeHtml(reply).replace(/\n/g, '<br>'));
+    } catch {
+      typing.remove();
+      appendMsg('agent', 'Connection error. Please contact admin on <a href="https://wa.me/256726543986" target="_blank">WhatsApp</a>.');
+    } finally {
+      input.disabled = false;
+      document.getElementById('chatSend').disabled = false;
+      input.focus();
+    }
+  });
+
+  function escapeHtml(str) {
+    return str.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  }
+})();
 </script>
 </body>
 </html>
