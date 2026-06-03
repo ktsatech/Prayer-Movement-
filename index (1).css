@@ -1,0 +1,353 @@
+/* ========== RESET & BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: #F5F7FA;
+  color: #1e2a2e;
+  line-height: 1.5;
+}
+
+/* ========== NAVBAR (logo top, links horizontal row) ========== */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0B1F3B;
+  color: white;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #C8A85A;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  letter-spacing: -0.3px;
+}
+
+/* Always horizontal, no hamburger */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;          /* maximum gap between links */
+  background: none;
+  padding: 0;
+  width: auto;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #C8A85A;
+}
+
+/* No hamburger styles anywhere */
+
+/* ========== HERO SECTION ========== */
+.hero {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #0B1F3B 0%, #2E3A46 100%);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.btn {
+  display: inline-block;
+  background: #C8A85A;
+  color: #0B1F3B;
+  padding: 0.8rem 2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background: #b8973c;
+  transform: scale(1.02);
+}
+
+/* ========== STATS GRID ========== */
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0B1F3B;
+}
+
+/* ========== ABOUT SECTION ========== */
+.about, .register-section, .recent-churches {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about h3 {
+  font-size: 2rem;
+  color: #0B1F3B;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.about h4 {
+  font-size: 1.5rem;
+  color: #2E3A46;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.content-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.content-card:hover {
+  transform: translateY(-2px);
+}
+
+.vision-card {
+  border-left: 6px solid #4A90E2;
+  background: linear-gradient(135deg, #ffffff, #F0F7FF);
+}
+
+.participate-card {
+  border-left: 6px solid #C8A85A;
+  background: linear-gradient(135deg, #ffffff, #FFFDF5);
+}
+
+.nations-card {
+  border-left: 6px solid #2A9D8F;
+  background: linear-gradient(135deg, #ffffff, #F2FCF9);
+  margin-bottom: 1rem;
+}
+
+.prayer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.prayer-card {
+  background: rgba(42, 157, 143, 0.12);
+  backdrop-filter: blur(2px);
+  border-left: 4px solid #2A9D8F;
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: transform 0.2s, background 0.2s;
+  color: #0B1F3B;
+  font-weight: 500;
+}
+
+.prayer-card:hover {
+  transform: translateY(-4px);
+  background: rgba(42, 157, 143, 0.22);
+}
+
+.prayer-card strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.join-call {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #0B1F3B;
+  color: white;
+  padding: 1rem;
+  border-radius: 40px;
+  margin-top: 2rem;
+}
+
+/* ========== REGISTRATION FORM ========== */
+form input, form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form input:focus, form select:focus {
+  outline: none;
+  border-color: #C8A85A;
+  box-shadow: 0 0 0 2px rgba(200,168,90,0.2);
+}
+
+/* ========== RECENTLY VERIFIED ========== */
+.recent-churches ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-churches li {
+  background: white;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border-left: 4px solid #3FAF7C;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+/* ========== ADMIN PANEL ========== */
+.admin-panel {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0B1F3B;
+  color: white;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #C8A85A;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ========== FLOATING WHATSAPP BUTTON ========== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 700px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  .hero {
+    padding: 2rem 1rem;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .stats-grid {
+    flex-direction: column;
+    margin: 1rem;
+    gap: 1rem;
+  }
+  .stat-card {
+    padding: 1rem;
+  }
+  .stat-number {
+    font-size: 2rem;
+  }
+  .prayer-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .about h3 {
+    font-size: 1.6rem;
+  }
+  .about h4 {
+    font-size: 1.3rem;
+  }
+  .whatsapp-float {
+    bottom: 15px;
+    right: 15px;
+    padding: 6px;
+  }
+  .whatsapp-float img {
+    width: 40px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
