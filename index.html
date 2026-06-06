@@ -3,60 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <title>Prayer Movement | Church Registration</title>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  emailjs.init('eNR8A7R-MO9ETcLX8');
-</script>
-<script type="module" src="index.js"></script>
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="Mq.css">
+
+  <!-- Import map for Firebase modules -->
   <script type="importmap">
     {
       "imports": {
-        "firebase/app": "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js",
-        "firebase/firestore": "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js",
-        "firebase/auth": "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js",
-        "firebase/storage": "https://www.gstatic.com/firebasejs/12.14.0/firebase-storage.js"
+        "firebase/app": "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js",
+        "firebase/firestore": "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js",
+        "firebase/auth": "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"
       }
     }
   </script>
+
+  <!-- EmailJS SDK (loaded once) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Main styles -->
+  <link rel="stylesheet" href="index.css">
+
+  <!-- Main module -->
   <script type="module" src="index.js"></script>
 </head>
 <body>
 
-<nav class="navbar">
-  <div  class="logo">PRAYER MOVEMENT</div>
+<nav class="navbar" id="navbar">
+  <div class="logo">PRAYER MOVEMENT</div>
   <div class="nav-links" id="navLinks">
     <a href="index.html">Home</a>
     <a href="#about">About</a>
     <a href="#register">Register</a>
-    <a href="dashboard" id="adminLink">Admin</a>
+    <a href="#" id="adminLink">Admin</a>
     <a href="#" id="logoutLink" style="display:none;">Logout</a>
   </div>
-  <button class="hamburger" id="hamburger">☰</button>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
 </nav>
 
 <!-- Online Prayer Gathering Banner -->
 <div class="online-banner">
   <div class="banner-content">
-    <h3>Online Prayer Gathering — Sunday, 7th June 2026 at 9:00 PM EAT</h3>
+    <h3>Online Prayer Gathering &mdash; Sunday, 7th June 2026 at 9:00 PM EAT</h3>
     <p>Join us online as we pray for Uganda. Get the Google Meet link via WhatsApp.</p>
-    <a href="https://wa.me/256726543986?text=Hello%2C%20I%20need%20the%20Google%20Meet%20link%20for%20the%20June%207th%20prayer%20gathering" 
-       class="banner-wa-btn" 
-       target="_blank" 
+    <a href="https://wa.me/256726543986?text=Hello%2C%20I%20need%20the%20Google%20Meet%20link%20for%20the%20June%207th%20prayer%20gathering"
+       class="banner-wa-btn"
+       target="_blank"
        rel="noopener noreferrer">
-      📱 Get Meet Link on WhatsApp
+      &#128241; Get Meet Link on WhatsApp
     </a>
   </div>
 </div>
 
+<!-- Hero -->
 <section class="hero">
   <h1>Uniting Churches in Prayer,<br>Faith and National Transformation</h1>
   <a href="#register" class="btn">Register Church or Prayer Group</a>
 </section>
 
+<!-- Stats -->
 <section class="stats-grid" id="statsGrid">
   <div class="stat-card"><div class="stat-number" id="totalChurches">123</div><div>Churches</div></div>
   <div class="stat-card"><div class="stat-number" id="verifiedChurches">23</div><div>Verified</div></div>
@@ -69,39 +72,39 @@
 <section id="about" class="about">
   <div class="about-container">
     <h3>Opening the Portals of Worship</h3>
-    <p>On June 7th, believers from across the globe are uniting with a single, heart‑felt purpose: to fill the earth with one hour of dedicated praise, worship, and intercession for our nations.</p>
-    
+    <p>On June 7th, believers from across the globe are uniting with a single, heart&#8209;felt purpose: to fill the earth with one hour of dedicated praise, worship, and intercession for our nations.</p>
+
     <div class="content-card vision-card">
       <h4>Our Vision</h4>
-      <p>This initiative finds its roots in a divine calling received early this year to "open the portal of worship." We believe that when the Church gathers to lift up the name of Jesus, we shift the spiritual atmosphere of our lands. Aligning with the March for Jesus movement celebrated in various countries, we are calling on fellowships, churches, and small groups everywhere to set aside time on June 7th to exalt God and seek God on behalf of our Nations.</p>
+      <p>This initiative finds its roots in a divine calling received early this year to &ldquo;open the portal of worship.&rdquo; We believe that when the Church gathers to lift up the name of Jesus, we shift the spiritual atmosphere of our lands. Aligning with the March for Jesus movement celebrated in various countries, we are calling on fellowships, churches, and small groups everywhere to set aside time on June 7th to exalt God and seek God on behalf of our Nations.</p>
     </div>
-    
+
     <div class="content-card participate-card">
       <h4>How to Participate</h4>
       <p><strong>The Format:</strong> Each church, fellowship, or community group decides on their own location and time on that very day of 7th June 2026.<br>
-      <strong>The Atmosphere:</strong> While indoor gatherings are welcome, we encourage groups to hold their sessions outdoors—taking worship into the public sphere to be a witness to our nations and this also gives an open chance even to those who don't go to church to be part of praying for our Country Uganda.<br>
+      <strong>The Atmosphere:</strong> While indoor gatherings are welcome, we encourage groups to hold their sessions outdoors&mdash;taking worship into the public sphere to be a witness to our nations and this also gives an open chance even to those who don&rsquo;t go to church to be part of praying for our Country Uganda.<br>
       <strong>The Goal:</strong> At least a single hour of worshiping, praising and interceding on behalf of Uganda.<br>
       <strong>Share the Moment:</strong> Please record your worship and prayer sessions. Sharing these recordings allows us to gather a global testimony of how God is moving from country to country. You can share the videos by tapping the WhatsApp Icon.</p>
     </div>
-    
+
     <div class="content-card nations-card">
       <h4>Our Heart for the Nations</h4>
       <p>As we gather, we lift up these core pillars on behalf of our country Uganda:</p>
     </div>
-    
+
     <div class="prayer-grid">
-      <div class="prayer-card"><strong>Leadership & Government</strong><br>Praying for wisdom, integrity, and the fear of the Lord in our halls of power.</div>
-      <div class="prayer-card"><strong>Unity & Security</strong><br>Asking for peace, harmony across cultures and religions, and protection from unrest.</div>
-      <div class="prayer-card"><strong>Economy & Provision</strong><br>Interceding for restored economies, job creation, and the well‑being of the workforce.</div>
-      <div class="prayer-card"><strong>Safety & Protection</strong><br>Praying for protection from natural disasters and wisdom for relief efforts.</div>
+      <div class="prayer-card"><strong>Leadership &amp; Government</strong><br>Praying for wisdom, integrity, and the fear of the Lord in our halls of power.</div>
+      <div class="prayer-card"><strong>Unity &amp; Security</strong><br>Asking for peace, harmony across cultures and religions, and protection from unrest.</div>
+      <div class="prayer-card"><strong>Economy &amp; Provision</strong><br>Interceding for restored economies, job creation, and the well&#8209;being of the workforce.</div>
+      <div class="prayer-card"><strong>Safety &amp; Protection</strong><br>Praying for protection from natural disasters and wisdom for relief efforts.</div>
       <div class="prayer-card"><strong>Public Health</strong><br>Asking for healing, prevention of outbreaks, and strength for medical workers.</div>
-      <div class="prayer-card"><strong>The Next Generation</strong><br>Standing for the protection of our youth and the rise of a God‑fearing generation.</div>
+      <div class="prayer-card"><strong>The Next Generation</strong><br>Standing for the protection of our youth and the rise of a God&#8209;fearing generation.</div>
       <div class="prayer-card"><strong>The Church</strong><br>Praying for spiritual revival, unity, and that the Church may be the light of the world.</div>
-      <div class="prayer-card"><strong>Justice & Order</strong><br>Asking for fairness in law enforcement and an end to crime and exploitation.</div>
+      <div class="prayer-card"><strong>Justice &amp; Order</strong><br>Asking for fairness in law enforcement and an end to crime and exploitation.</div>
       <div class="prayer-card"><strong>Families</strong><br>Praying for the restoration, health, and stability of homes everywhere.</div>
       <div class="prayer-card"><strong>Thanksgiving</strong><br>Ending in gratitude for the unique blessings, beauty, and diversity of our nations.</div>
     </div>
-    
+
     <p class="join-call">Join us this June 7th. Let us stand in the gap, lift our voices, and saturate Uganda with the presence of God.</p>
   </div>
 </section>
@@ -110,163 +113,198 @@
 <section id="register" class="register-section">
   <h2>Ready to Join?</h2>
   <p>Register your church and become part of a growing movement of prayer.</p>
-  <form id="churchForm">
-    <input type="text" id="churchName" placeholder="Church Name" required>
-    <input type="text" id="denomination" placeholder="Denomination">
-    <select id="district" name="district" required>
-  <option value="">Select District</option>
-  <option value="Abim">Abim</option>
-  <option value="Adjumani">Adjumani</option>
-  <option value="Agago">Agago</option>
-  <option value="Alebtong">Alebtong</option>
-  <option value="Amolatar">Amolatar</option>
-  <option value="Amudat">Amudat</option>
-  <option value="Amuria">Amuria</option>
-  <option value="Amuru">Amcy8uru</option>
-  <option value="Apac">Apac</option>
-  <option value="Arua">Arua</option>
-  <option value="Budaka">Budaka</option>
-  <option value="Bududa">Bududa</option>
-  <option value="Bugiri">Bugiri</option>
-  <option value="Bugweri">Bugweri</option>
-  <option value="Buhweju">Buhweju</option>
-  <option value="Buikwe">Buikwe</option>
-  <option value="Bukedea">Bukedea</option>
-  <option value="Bukomansimbi">Bukomansimbi</option>
-  <option value="Bukwo">Bukwo</option>
-  <option value="Bulambuli">Bulambuli</option>
-  <option value="Buliisa">Buliisa</option>
-  <option value="Bundibugyo">Bundibugyo</option>
-  <option value="Bunyangabu">Bunyangabu</option>
-  <option value="Bushenyi">Bushenyi</option>
-  <option value="Busia">Busia</option>
-  <option value="Butaleja">Butaleja</option>
-  <option value="Butambala">Butambala</option>
-  <option value="Buvuma">Buvuma</option>
-  <option value="Buyende">Buyende</option>
-  <option value="Dokolo">Dokolo</option>
-  <option value="Gomba">Gomba</option>
-  <option value="Gulu">Gulu</option>
-  <option value="Hoima">Hoima</option>
-  <option value="Ibanda">Ibanda</option>
-  <option value="Iganga">Iganga</option>
-  <option value="Isingiro">Isingiro</option>
-  <option value="Jinja">Jinja</option>
-  <option value="Kaabong">Kaabong</option>
-  <option value="Kabale">Kabale</option>
-  <option value="Kabarole">Kabarole</option>
-  <option value="Kaberamaido">Kaberamaido</option>
-  <option value="Kabong">Kabong</option>
-  <option value="Kagadi">Kagadi</option>
-  <option value="Kakumiro">Kakumiro</option>
-  <option value="Kalangala">Kalangala</option>
-  <option value="Kaliro">Kaliro</option>
-  <option value="Kalungu">Kalungu</option>
-  <option value="Kampala">Kampala</option>
-  <option value="Kamuli">Kamuli</option>
-  <option value="Kamwenge">Kamwenge</option>
-  <option value="Kanungu">Kanungu</option>
-  <option value="Kapchorwa">Kapchorwa</option>
-  <option value="Kasese">Kasese</option>
-  <option value="Katakwi">Katakwi</option>
-  <option value="Kayunga">Kayunga</option>
-  <option value="Kibaale">Kibaale</option>
-  <option value="Kiboga">Kiboga</option>
-  <option value="Kibuku">Kibuku</option>
-  <option value="Kikuube">Kikuube</option>
-  <option value="Kiruhura">Kiruhura</option>
-  <option value="Kiryandongo">Kiryandongo</option>
-  <option value="Kisoro">Kisoro</option>
-  <option value="Kitgum">Kitgum</option>
-  <option value="Koboko">Koboko</option>
-  <option value="Kole">Kole</option>
-  <option value="Kotido">Kotido</option>
-  <option value="Kumi">Kumi</option>
-  <option value="Kwania">Kwania</option>
-  <option value="Kween">Kween</option>
-  <option value="Kyankwanzi">Kyankwanzi</option>
-  <option value="Kyegegwa">Kyegegwa</option>
-  <option value="Kyenjojo">Kyenjojo</option>
-  <option value="Kyotera">Kyotera</option>
-  <option value="Lamwo">Lamwo</option>
-  <option value="Lira">Lira</option>
-  <option value="Luuka">Luuka</option>
-  <option value="Luwero">Luwero</option>
-  <option value="Lwengo">Lwengo</option>
-  <option value="Lyantonde">Lyantonde</option>
-  <option value="Madi-Okollo">Madi-Okollo</option>
-  <option value="Manjiya">Manjiya</option>
-  <option value="Masaka">Masaka</option>
-  <option value="Masindi">Masindi</option>
-  <option value="Mayuge">Mayuge</option>
-  <option value="Mbale">Mbale</option>
-  <option value="Mbarara">Mbarara</option>
-  <option value="Mitooma">Mitooma</option>
-  <option value="Mityana">Mityana</option>
-  <option value="Moroto">Moroto</option>
-  <option value="Moyo">Moyo</option>
-  <option value="Mpigi">Mpigi</option>
-  <option value="Mubende">Mubende</option>
-  <option value="Mukono">Mukono</option>
-  <option value="Nabilatuk">Nabilatuk</option>
-  <option value="Nakapiripirit">Nakapiripirit</option>
-  <option value="Nakaseke">Nakaseke</option>
-  <option value="Nakasongola">Nakasongola</option>
-  <option value="Namayingo">Namayingo</option>
-  <option value="Namisindwa">Namisindwa</option>
-  <option value="Namutumba">Namutumba</option>
-  <option value="Napak">Napak</option>
-  <option value="Nebbi">Nebbi</option>
-  <option value="Ngora">Ngora</option>
-  <option value="Ntoroko">Ntoroko</option>
-  <option value="Ntungamo">Ntungamo</option>
-  <option value="Nwoya">Nwoya</option>
-  <option value="Obongi">Obongi</option>
-  <option value="Omoro">Omoro</option>
-  <option value="Otuke">Otuke</option>
-  <option value="Oyam">Oyam</option>
-  <option value="Pader">Pader</option>
-  <option value="Pakwach">Pakwach</option>
-  <option value="Pallisa">Pallisa</option>
-  <option value="Rakai">Rakai</option>
-  <option value="Rubanda">Rubanda</option>
-  <option value="Rubirizi">Rubirizi</option>
-  <option value="Rukungiri">Rukungiri</option>
-  <option value="Rwampara">Rwampara</option>
-  <option value="Sembabule">Sembabule</option>
-  <option value="Serere">Serere</option>
-  <option value="Sheema">Sheema</option>
-  <option value="Sironko">Sironko</option>
-  <option value="Soroti">Soroti</option>
-  <option value="Terego">Terego</option>
-  <option value="Tororo">Tororo</option>
-  <option value="Wakiso">Wakiso</option>
-  <option value="Yumbe">Yumbe</option>
-  <option value="Zombo">Zombo</option>
-</select>
-
-    <input type="text" id="subcounty" placeholder="Sub-county" required>
-    <input type="text" id="parish" placeholder="Parish">
-    <input type="text" id="village" placeholder="Village/Town">
-    <input type="text" id="pastorName" placeholder="Name of Church leader" required>
-    <input type="text" id="leader" placeholder="Title of church leader" required>
-    <input type="tel" id="pastorPhone" placeholder="Leader's contact" required>
-    <input type="text" id="altPersonName" placeholder="Alternate Contact Person Name (optional)">
-    <input type="tel" id="altPersonPhone" placeholder="Alternate Contact Phone (optional)">
-    <input type="number" id="expectedSize" placeholder="Expected Participants (approx)" value="150">
-    <button type="submit" class="btn">Register Church</button>
+  <form id="churchForm" novalidate>
+    <div class="form-group">
+      <label for="churchName">Church Name <span class="required">*</span></label>
+      <input type="text" id="churchName" name="churchName" placeholder="e.g. Grace Community Church" required autocomplete="organization">
+    </div>
+    <div class="form-group">
+      <label for="denomination">Denomination</label>
+      <input type="text" id="denomination" name="denomination" placeholder="e.g. Pentecostal, Anglican, Baptist">
+    </div>
+    <div class="form-group">
+      <label for="district">District <span class="required">*</span></label>
+      <select id="district" name="district" required>
+        <option value="">Select District</option>
+        <option value="Abim">Abim</option>
+        <option value="Adjumani">Adjumani</option>
+        <option value="Agago">Agago</option>
+        <option value="Alebtong">Alebtong</option>
+        <option value="Amolatar">Amolatar</option>
+        <option value="Amudat">Amudat</option>
+        <option value="Amuria">Amuria</option>
+        <option value="Amuru">Amuru</option>
+        <option value="Apac">Apac</option>
+        <option value="Arua">Arua</option>
+        <option value="Budaka">Budaka</option>
+        <option value="Bududa">Bududa</option>
+        <option value="Bugiri">Bugiri</option>
+        <option value="Bugweri">Bugweri</option>
+        <option value="Buhweju">Buhweju</option>
+        <option value="Buikwe">Buikwe</option>
+        <option value="Bukedea">Bukedea</option>
+        <option value="Bukomansimbi">Bukomansimbi</option>
+        <option value="Bukwo">Bukwo</option>
+        <option value="Bulambuli">Bulambuli</option>
+        <option value="Buliisa">Buliisa</option>
+        <option value="Bundibugyo">Bundibugyo</option>
+        <option value="Bunyangabu">Bunyangabu</option>
+        <option value="Bushenyi">Bushenyi</option>
+        <option value="Busia">Busia</option>
+        <option value="Butaleja">Butaleja</option>
+        <option value="Butambala">Butambala</option>
+        <option value="Buvuma">Buvuma</option>
+        <option value="Buyende">Buyende</option>
+        <option value="Dokolo">Dokolo</option>
+        <option value="Gomba">Gomba</option>
+        <option value="Gulu">Gulu</option>
+        <option value="Hoima">Hoima</option>
+        <option value="Ibanda">Ibanda</option>
+        <option value="Iganga">Iganga</option>
+        <option value="Isingiro">Isingiro</option>
+        <option value="Jinja">Jinja</option>
+        <option value="Kaabong">Kaabong</option>
+        <option value="Kabale">Kabale</option>
+        <option value="Kabarole">Kabarole</option>
+        <option value="Kaberamaido">Kaberamaido</option>
+        <option value="Kabong">Kabong</option>
+        <option value="Kagadi">Kagadi</option>
+        <option value="Kakumiro">Kakumiro</option>
+        <option value="Kalangala">Kalangala</option>
+        <option value="Kaliro">Kaliro</option>
+        <option value="Kalungu">Kalungu</option>
+        <option value="Kampala">Kampala</option>
+        <option value="Kamuli">Kamuli</option>
+        <option value="Kamwenge">Kamwenge</option>
+        <option value="Kanungu">Kanungu</option>
+        <option value="Kapchorwa">Kapchorwa</option>
+        <option value="Kasese">Kasese</option>
+        <option value="Katakwi">Katakwi</option>
+        <option value="Kayunga">Kayunga</option>
+        <option value="Kibaale">Kibaale</option>
+        <option value="Kiboga">Kiboga</option>
+        <option value="Kibuku">Kibuku</option>
+        <option value="Kikuube">Kikuube</option>
+        <option value="Kiruhura">Kiruhura</option>
+        <option value="Kiryandongo">Kiryandongo</option>
+        <option value="Kisoro">Kisoro</option>
+        <option value="Kitgum">Kitgum</option>
+        <option value="Koboko">Koboko</option>
+        <option value="Kole">Kole</option>
+        <option value="Kotido">Kotido</option>
+        <option value="Kumi">Kumi</option>
+        <option value="Kwania">Kwania</option>
+        <option value="Kween">Kween</option>
+        <option value="Kyankwanzi">Kyankwanzi</option>
+        <option value="Kyegegwa">Kyegegwa</option>
+        <option value="Kyenjojo">Kyenjojo</option>
+        <option value="Kyotera">Kyotera</option>
+        <option value="Lamwo">Lamwo</option>
+        <option value="Lira">Lira</option>
+        <option value="Luuka">Luuka</option>
+        <option value="Luwero">Luwero</option>
+        <option value="Lwengo">Lwengo</option>
+        <option value="Lyantonde">Lyantonde</option>
+        <option value="Madi-Okollo">Madi-Okollo</option>
+        <option value="Manjiya">Manjiya</option>
+        <option value="Masaka">Masaka</option>
+        <option value="Masindi">Masindi</option>
+        <option value="Mayuge">Mayuge</option>
+        <option value="Mbale">Mbale</option>
+        <option value="Mbarara">Mbarara</option>
+        <option value="Mitooma">Mitooma</option>
+        <option value="Mityana">Mityana</option>
+        <option value="Moroto">Moroto</option>
+        <option value="Moyo">Moyo</option>
+        <option value="Mpigi">Mpigi</option>
+        <option value="Mubende">Mubende</option>
+        <option value="Mukono">Mukono</option>
+        <option value="Nabilatuk">Nabilatuk</option>
+        <option value="Nakapiripirit">Nakapiripirit</option>
+        <option value="Nakaseke">Nakaseke</option>
+        <option value="Nakasongola">Nakasongola</option>
+        <option value="Namayingo">Namayingo</option>
+        <option value="Namisindwa">Namisindwa</option>
+        <option value="Namutumba">Namutumba</option>
+        <option value="Napak">Napak</option>
+        <option value="Nebbi">Nebbi</option>
+        <option value="Ngora">Ngora</option>
+        <option value="Ntoroko">Ntoroko</option>
+        <option value="Ntungamo">Ntungamo</option>
+        <option value="Nwoya">Nwoya</option>
+        <option value="Obongi">Obongi</option>
+        <option value="Omoro">Omoro</option>
+        <option value="Otuke">Otuke</option>
+        <option value="Oyam">Oyam</option>
+        <option value="Pader">Pader</option>
+        <option value="Pakwach">Pakwach</option>
+        <option value="Pallisa">Pallisa</option>
+        <option value="Rakai">Rakai</option>
+        <option value="Rubanda">Rubanda</option>
+        <option value="Rubirizi">Rubirizi</option>
+        <option value="Rukungiri">Rukungiri</option>
+        <option value="Rwampara">Rwampara</option>
+        <option value="Sembabule">Sembabule</option>
+        <option value="Serere">Serere</option>
+        <option value="Sheema">Sheema</option>
+        <option value="Sironko">Sironko</option>
+        <option value="Soroti">Soroti</option>
+        <option value="Terego">Terego</option>
+        <option value="Tororo">Tororo</option>
+        <option value="Wakiso">Wakiso</option>
+        <option value="Yumbe">Yumbe</option>
+        <option value="Zombo">Zombo</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="subcounty">Sub-county <span class="required">*</span></label>
+      <input type="text" id="subcounty" name="subcounty" placeholder="Sub-county" required>
+    </div>
+    <div class="form-group">
+      <label for="parish">Parish</label>
+      <input type="text" id="parish" name="parish" placeholder="Parish">
+    </div>
+    <div class="form-group">
+      <label for="village">Village / Town</label>
+      <input type="text" id="village" name="village" placeholder="Village or Town">
+    </div>
+    <div class="form-group">
+      <label for="pastorName">Church Leader Name <span class="required">*</span></label>
+      <input type="text" id="pastorName" name="pastorName" placeholder="Full name of the church leader" required autocomplete="name">
+    </div>
+    <div class="form-group">
+      <label for="leader">Leader Title <span class="required">*</span></label>
+      <input type="text" id="leader" name="leader" placeholder="e.g. Pastor, Bishop, Elder" required>
+    </div>
+    <div class="form-group">
+      <label for="pastorPhone">Leader&rsquo;s Contact <span class="required">*</span></label>
+      <input type="tel" id="pastorPhone" name="pastorPhone" placeholder="+256 700 000 000" required autocomplete="tel">
+    </div>
+    <div class="form-group">
+      <label for="altPersonName">Alternate Contact Name <span class="optional">(optional)</span></label>
+      <input type="text" id="altPersonName" name="altPersonName" placeholder="Alternate contact person name">
+    </div>
+    <div class="form-group">
+      <label for="altPersonPhone">Alternate Contact Phone <span class="optional">(optional)</span></label>
+      <input type="tel" id="altPersonPhone" name="altPersonPhone" placeholder="+256 700 000 000" autocomplete="tel">
+    </div>
+    <div class="form-group">
+      <label for="expectedSize">Expected Participants <span class="required">*</span></label>
+      <input type="number" id="expectedSize" name="expectedSize" placeholder="Approximate number of participants" value="150" min="1">
+    </div>
+    <button type="submit" class="btn btn-submit" id="submitBtn">Register Church</button>
   </form>
-  <div id="formMessage"></div>
+  <div id="formMessage" role="alert" aria-live="polite"></div>
 </section>
 
+<!-- Recently Verified -->
 <section class="recent-churches">
   <h2>Recently Verified Churches</h2>
-  <h2>  48 </h2>
   <ul id="recentList"></ul>
-  <p class="btn">Finding difficulty Send a whatsapp message to +256726543986 </p>
-  
+  <p class="whatsapp-help">Having difficulty? <a href="https://wa.me/256726543986" target="_blank" rel="noopener noreferrer">Send a WhatsApp message to +256726543986</a></p>
 </section>
 
+<!-- Admin panel (shown only to admins) -->
 <div id="adminPanel" style="display:none;" class="admin-panel">
   <h2>Admin Quick Panel</h2>
   <div id="pendingSummary"></div>
@@ -274,44 +312,40 @@
 </div>
 
 <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/256726543986?text=Hello%2C%20I%20want%20to%20register%20a%20church%20and%20ask%20a%20few%20questions" 
-   class="whatsapp-float" 
-   target="_blank" 
-   rel="noopener noreferrer">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50" height="32">
+<a href="https://wa.me/256726543986?text=Hello%2C%20I%20want%20to%20register%20a%20church%20and%20ask%20a%20few%20questions"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="32" height="32">
 </a>
 
 <footer>
-  <p>© 2026 International Prayer Movement | Uganda Prayer Warriors</p>
-  <p><a href="#">Home</a> | <a href="#about">About</a> | <a href="#register">Register</a></p>
+  <p>&copy; 2026 International Prayer Movement | Uganda Prayer Warriors</p>
+  <p><a href="index.html">Home</a> | <a href="#about">About</a> | <a href="#register">Register</a></p>
 </footer>
-<!-- EmailJS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  // Initialize EmailJS with your public key
-  emailjs.init('eNR8A7R-MO9ETcLX8');
-</script>
 
 <!-- Kutesa Emma AI Assistant -->
 <div id="aiAssistant" class="ai-assistant">
-  <button class="ai-button" id="aiToggleBtn">
-    <span>🤖</span> Kutesa Emma
+  <button class="ai-button" id="aiToggleBtn" aria-label="Open AI assistant">
+    <span aria-hidden="true">&#129302;</span> Kutesa Emma
   </button>
-  <div class="ai-chat" id="aiChat" style="display: none;">
+  <div class="ai-chat" id="aiChat" style="display:none;" role="dialog" aria-label="Kutesa Emma – Prayer Assistant">
     <div class="ai-chat-header">
-      <span>Kutesa Emma – Prayer Assistant</span>
-      <button class="ai-close" id="aiCloseBtn">&times;</button>
+      <span>Kutesa Emma &ndash; Prayer Assistant</span>
+      <button class="ai-close" id="aiCloseBtn" aria-label="Close">&times;</button>
     </div>
     <div class="ai-chat-messages" id="aiMessages">
       <div class="ai-message ai-bot">
-        👋 Hello! I'm Kutesa Emma, your AI assistant for the Prayer Movement. Ask me anything about the June 7th event, registration, prayer points, or how to participate. I may make mistakes, so please Contact us on whatsapp.
+        &#128075; Hello! I&rsquo;m Kutesa Emma, your AI assistant for the Prayer Movement. Ask me anything about the June 7th event, registration, prayer points, or how to participate. I may make mistakes, so please contact us on WhatsApp if you need precise help.
       </div>
     </div>
     <div class="ai-chat-input">
-      <input type="text" id="aiUserInput" placeholder="Ask me a question...">
+      <input type="text" id="aiUserInput" placeholder="Ask me a question..." autocomplete="off" aria-label="Your question">
       <button id="aiSendBtn">Send</button>
     </div>
   </div>
 </div>
+
 </body>
 </html>
