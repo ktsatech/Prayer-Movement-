@@ -406,3 +406,102 @@ footer a:hover {
     padding: 0.5rem 1rem;
   }
 }
+
+
+/* Kutesa Emma AI Assistant – now on right side, above WhatsApp */
+.ai-assistant {
+  position: fixed;
+  bottom: 90px;       /* 20px (WhatsApp margin) + ~50px (WhatsApp height) + 20px gap */
+  right: 20px;
+  z-index: 1001;
+}
+
+.ai-button {
+  background: linear-gradient(135deg, #0B1F3B, #2E3A46);
+  color: #C8A85A;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.ai-chat {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 320px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+/* Mobile adjustment */
+@media (max-width: 600px) {
+  .ai-assistant {
+    bottom: 80px;
+    right: 15px;
+  }
+  .ai-chat {
+    width: 280px;
+    bottom: 70px;
+    right: 0;
+  }
+  .ai-button {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+
+
+
+
+/* Error overlay message */
+.error-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  padding: 24px;
+  text-align: center;
+  z-index: 2000;
+  max-width: 90%;
+  width: 320px;
+  border-left: 6px solid #dc3545;
+}
+.error-overlay h3 {
+  color: #dc3545;
+  margin-bottom: 12px;
+}
+.error-overlay p {
+  margin-bottom: 16px;
+  color: #333;
+}
+.error-overlay .whatsapp-link {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 40px;
+  text-decoration: none;
+  margin-top: 8px;
+}
+.error-overlay .close-hint {
+  margin-top: 16px;
+  font-size: 0.75rem;
+  color: #888;
+}

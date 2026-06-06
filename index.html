@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <title>Prayer Movement | Church Registration</title>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init('eNR8A7R-MO9ETcLX8');
+</script>
+<script type="module" src="index.js"></script>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="Mq.css">
   <script type="importmap">
@@ -117,7 +122,7 @@
   <option value="Amolatar">Amolatar</option>
   <option value="Amudat">Amudat</option>
   <option value="Amuria">Amuria</option>
-  <option value="Amuru">Amuru</option>
+  <option value="Amuru">Amcy8uru</option>
   <option value="Apac">Apac</option>
   <option value="Arua">Arua</option>
   <option value="Budaka">Budaka</option>
@@ -286,5 +291,27 @@
   // Initialize EmailJS with your public key
   emailjs.init('eNR8A7R-MO9ETcLX8');
 </script>
+
+<!-- Kutesa Emma AI Assistant -->
+<div id="aiAssistant" class="ai-assistant">
+  <button class="ai-button" id="aiToggleBtn">
+    <span>🤖</span> Kutesa Emma
+  </button>
+  <div class="ai-chat" id="aiChat" style="display: none;">
+    <div class="ai-chat-header">
+      <span>Kutesa Emma – Prayer Assistant</span>
+      <button class="ai-close" id="aiCloseBtn">&times;</button>
+    </div>
+    <div class="ai-chat-messages" id="aiMessages">
+      <div class="ai-message ai-bot">
+        👋 Hello! I'm Kutesa Emma, your AI assistant for the Prayer Movement. Ask me anything about the June 7th event, registration, prayer points, or how to participate. I may make mistakes, so please Contact us on whatsapp.
+      </div>
+    </div>
+    <div class="ai-chat-input">
+      <input type="text" id="aiUserInput" placeholder="Ask me a question...">
+      <button id="aiSendBtn">Send</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
